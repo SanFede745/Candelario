@@ -1,0 +1,8 @@
+[
+    {
+        "nombre": "SanFede",
+        "cumpleanos": "2009-11-17",
+        "password": "scrypt:32768:8:1$jZKyurLN0K0OO0He$629326427f9d6de31f39fcde9537dd21a1ad93aa4f60b4fa741bd05b5abc5c021d32a1754e934aadfd7927c05543de8830bcb49749f85b9cd23272c020daa693",
+        "color": "#685dbb"
+    }
+]
