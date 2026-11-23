@@ -1,33 +1,217 @@
+/* ===== Colores (cambiando estas variables cambia toda la app) ===== */
+:root {
+    --principal: #6c5ce7;
+    --principal-oscuro: #5848c8;
+    --fondo: #f5f3ff;
+    --texto: #2d2a4a;
+    --texto-suave: #8a86a8;
+    --tarjeta: #ffffff;
+    --borde: #e0dcf5;
+    --error: #e74c3c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
     margin: 0;
-    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    color: var(--texto);
+    background: linear-gradient(160deg, #f5f3ff 0%, #e8e4ff 100%);
+    min-height: 100vh;
+}
+
+/* ===== Barra de navegación ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    background: var(--tarjeta);
+    box-shadow: 0 2px 10px rgba(108, 92, 231, 0.12);
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--principal);
+    text-decoration: none;
+}
+
+.navbar nav a {
+    margin-left: 20px;
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: var(--principal);
+}
+
+/* ===== Contenedor general ===== */
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ===== Portada ===== */
+.hero {
+    text-align: center;
+    padding: 40px 0 30px;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin: 0 0 10px;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: var(--texto-suave);
+    margin: 0 0 25px;
+}
+
+/* ===== Botones ===== */
+.boton {
+    display: inline-block;
+    background: var(--principal);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.boton:hover {
+    background: var(--principal-oscuro);
+    transform: translateY(-2px);
+}
+
+/* ===== Categorías de ideas ===== */
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.categoria {
+    background: var(--tarjeta);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(108, 92, 231, 0.12);
     text-align: center;
 }
 
-h1 {
-    color: #2c3e50;
+.categoria .emoji {
+    font-size: 2.2rem;
 }
 
-form {
-    display: inline-block;
-    text-align: left;
-    background: white;
-    padding: 20px 30px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.categoria h3 {
+    margin: 10px 0 6px;
 }
 
-button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
+.categoria p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+/* ===== Formularios ===== */
+.tarjeta-form {
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--tarjeta);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(108, 92, 231, 0.15);
+}
+
+.tarjeta-form h1 {
+    text-align: center;
+    margin: 0 0 20px;
+    font-size: 1.8rem;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.campo input[type="text"],
+.campo input[type="password"],
+.campo input[type="date"] {
+    width: 100%;
+    padding: 11px 14px;
+    border: 2px solid var(--borde);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: var(--principal);
+}
+
+.campo input[type="color"] {
+    width: 60px;
+    height: 40px;
+    border: 2px solid var(--borde);
+    border-radius: 10px;
+    padding: 2px;
     cursor: pointer;
+    background: white;
 }
 
-button:hover {
-    background-color: #2980b9;
+.tarjeta-form .boton {
+    width: 100%;
+    margin-top: 6px;
+}
+
+.error {
+    background: #fdecea;
+    color: var(--error);
+    padding: 10px 14px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
+.link-abajo {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+}
+
+.link-abajo a {
+    color: var(--principal);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ===== Celulares ===== */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 14px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
 }

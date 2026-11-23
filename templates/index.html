@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de ideas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <a class="logo" href="/">💡 Organizador de ideas</a>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/registro">Crear cuenta</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <section class="hero">
+            <h1>Organiza tus ideas y planes</h1>
+            <p>Juntas con amigos, salidas, series, juegos y más, todo en un solo lugar.</p>
+            <a class="boton" href="/registro">Empezar</a>
+        </section>
+
+        <section class="categorias">
+            <div class="categoria">
+                <div class="emoji">💭</div>
+                <h3>Ideas sueltas</h3>
+                <p>Cosas para hacer sin necesidad de juntarse.</p>
+            </div>
+            <div class="categoria">
+                <div class="emoji">🗺️</div>
+                <h3>Posibles salidas</h3>
+                <p>Planes que todavía se están pensando.</p>
+            </div>
+            <div class="categoria">
+                <div class="emoji">✅</div>
+                <h3>Confirmados</h3>
+                <p>Planes listos con fecha y grupo.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
