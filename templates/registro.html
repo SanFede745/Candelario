@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Crear cuenta</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label>Nombre:</label><br>
+        <input type="text" name="nombre" required><br><br>
+
+        <label>Cumpleaños:</label><br>
+        <input type="date" name="cumpleanos" required><br><br>
+
+        <label>Contraseña:</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <label>Color favorito:</label><br>
+        <input type="color" name="color" value="#3498db"><br><br>
+
+        <button type="submit">Registrarme</button>
+    </form>
+</body>
+</html>
